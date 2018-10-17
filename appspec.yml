@@ -1,0 +1,30 @@
+version: 0.0
+os: linux
+files:
+  - source: test.php
+    destination: /var/www/travis_test
+permissions:
+  - object: /var/www/travis_test
+    owner: ec2-user
+    group: ec2-user
+    mode: 2775
+    type:
+      - directory
+  - object: /var/www/travis_test
+    owner: ec2-user
+    group: ec2-user
+    mode: 644
+    type:
+      - file
+hooks:
+  BeforeInstall:
+    - location: scripts/install_dependencies.sh
+      timeout: 300
+      runas: root
+    - location: scripts/start_server.sh
+      timeout: 300
+      runas: root
+  ApplicationStop:
+    - location: scripts/stop_server.sh
+      timeout: 300
+      runas: root

@@ -1,0 +1,15 @@
+language: PHP
+script: ''
+deploy:
+  provider: codedeploy
+  access_key_id: AKIAIY5E5ZM7OHBWAQZA
+  secret_access_key:
+    secure: atEKnj1m2aLSPNjcoRIQ9SODAxugDD+DwiPt65n0fPFqUhnazjnPhW49/6IAO+Xt5y8oRpsnNOR9oFAkq4iPmzg4+1ogLld1bGPxp+nrbBUQ5S/9ssb1FhCKtyDU/CuxYYLpKcjmh8+WVqhb1lVawxAh+U8bVvB8zof9fo2y0z1RXjQPlI8BrQSYwtX6/zK+q924YZmwb/Ea0Tsp61MJHISs7xJ4lxLJLgt1D69aZ7tOWYnBLiX5rv5wpFRAlOmBif2UZjQL2Wnsv4BlbngeXVaRJ3D8a4XUSvsyAZgslVJMBc9oOAKjNjSGiCg83A9FWfAtAzcicmA+TivbpHTthdWu6A+CXZEPJbNlrbWUJ34hGlU9HKrj1hd0aYg1BgVR5m8XbFN0nUs47mEArS3cq6D9fEOnXDCIis0QUb7BcgNGOVb6V19bz8HS6n3h6EcCRGWFpP/MdXAqen9fChv5Cbp2TEapL5QJkYcE4FCY8R2cnDU6Y+PG1VGrcMEBaJ6IpIyizW7xWx/3gLmNuZW6e25+2GoPVpAehab+x6NCuLG5OBdhc+8AQYQpoRdPkhd8zhwvBDT9OHfIVC2yGx5+nIa6NiNiC8a9dLZPAhBz/vlAVZFIb/JUTOH3aZHoXkW7nHqSBzCBbRqPx35Vn+ftoBMPH3GeXx8X2AlogHb/N0E=
+  region: ap-northeast-1
+  application: testapp
+  deployment_group: testdeploy
+  on:
+    repo: masayaobata/try_deploy_1017
+    branch: master
+branches:
+  only: master
