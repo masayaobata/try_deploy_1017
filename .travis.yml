@@ -10,6 +10,6 @@ deploy:
   deployment_group: testdeploy
   on:
     repo: masayaobata/try_deploy_1017
-    branch: master
+    branch: develop
 branches:
-  only: master
+  only: develop
