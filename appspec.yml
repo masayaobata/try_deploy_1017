@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: test.php
+  - source: test_dir
     destination: /var/www/travis_test
 permissions:
   - object: /var/www/travis_test
