@@ -2,17 +2,17 @@ version: 0.0
 os: linux
 files:
   - source: test_dir
-    destination: /var/www/travis_test
+    destination: /var/www/travis_test/test_dir
 permissions:
   - object: /var/www/travis_test
-    owner: ec2-user
-    group: ec2-user
+    owner: ec2-user2
+    group: ec2-user2
     mode: 2775
     type:
       - directory
   - object: /var/www/travis_test
-    owner: ec2-user
-    group: ec2-user
+    owner: ec2-user2
+    group: ec2-user2
     mode: 644
     type:
       - file
